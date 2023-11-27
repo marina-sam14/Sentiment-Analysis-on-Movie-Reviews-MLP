@@ -24,3 +24,8 @@ separately for the training, development, and test subsets.
 the datasets (e.g., average sentence length, number of training/dev/test sentences and
 words, vocabulary size) and a description of the preprocessing steps that you
 performed.
+
+### CV $K$-fold using `GridSearch`
+We automate the process of hyperparameter tuning using Grid Search Cross-Validation and provides a summary of the results for multiple scoring metrics. The goal is to find the hyperparameter values that optimize the performance of the given estimator on the provided data.
+
+$$CV(\hat{f}) = \frac{1}{N}\sum_n^NL(y_i, \hat{f}^{-\kappa(i)}(x_i))$$
